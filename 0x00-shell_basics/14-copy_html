@@ -1,2 +1,2 @@
 #!/bin/bash
-cp -n .html  ..
+rsync -av --ignore-existing --update --include='*.html' --exclude='*' "$cwd/" "$parent_dir/"
